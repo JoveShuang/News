@@ -150,7 +150,7 @@
 
                 <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new): $mod = ($i % 2 );++$i;?><tr>
                     <td><input type="checkbox" name="pushcheck" value="<?php echo ($new["news_id"]); ?>"></td>
-                    <td><input size=4 type='text'  name='' value=""/></td><!--6.7-->
+                    <td><input size=4 type='text'  name='listorder[<?php echo ($new["news_id"]); ?>]' value="<?php echo ($new["listorder"]); ?>"/></td><!--6.7-->
                     <td><?php echo ($new["news_id"]); ?></td>
                     <td><?php echo ($new["title"]); ?></td>
                     <td><?php echo (getCatName($webSiteMenu,$new["catid"])); ?></td>
@@ -161,9 +161,9 @@
                     <td><?php echo (date("Y-m-d H:i",$new["create_time"])); ?></td>
 
 
-                    <td><span  attr-status=""  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($new["status"])); ?></span></td>
-                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                      <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                    <td><span  attr-status="<?php if($new['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($new["news_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($new["status"])); ?></span></td>
+                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($new["news_id"]); ?>" ></span>
+                      <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($new["news_id"]); ?>"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
 
@@ -176,7 +176,9 @@
                     <?php echo ($pageres); ?>
                 </ul>
               </nav>
-              
+              <div>
+                <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>更新排序 </button>
+              </div>
             </form>
 
           </div>

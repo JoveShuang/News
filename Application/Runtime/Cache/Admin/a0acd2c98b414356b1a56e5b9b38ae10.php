@@ -115,8 +115,7 @@
 						<label for="inputname" class="col-sm-2 control-label">选择推荐位:</label>
 						<div class="col-sm-5">
 							<select class="form-control" name="position_id">
-
-									<option value=""></option>
+								<?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>	
 							</select>
 						</div>
 					</div>

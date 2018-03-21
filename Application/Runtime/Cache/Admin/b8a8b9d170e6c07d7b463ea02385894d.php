@@ -108,7 +108,7 @@
                     <div class="input-group">
                         <span class="input-group-addon">推荐位</span>
                         <select class="form-control" name="position_id">
-                                <option value=""></option>
+                            <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>" <?php if($position['id'] == $positionId): ?>selected="selected"<?php endif; ?> ><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                 <input type="hidden" name="a" value="index"/>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input class="form-control" name="title" type="text" value="" placeholder="文章标题" />
+                        <input class="form-control" name="title" type="text" value="<?php echo ($title); ?>" placeholder="文章标题" />
                 <span class="input-group-btn">
                   <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                 </span>
@@ -143,23 +143,22 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><input size=4 type='text'  name='' value=""/></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <span  attr-status="0"  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ></span>
-                                </td>
-                                <td>
-                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
-                                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-                                    </a>
-                                </td>
-                            </tr>
-
+                            <?php if(is_array($contents)): $i = 0; $__LIST__ = $contents;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td><input size=4 type='text'  name='listorder<?php echo ($vo["id"]); ?>' value="<?php echo ($vo["position_id"]); ?>"/></td>
+                                    <td><?php echo ($vo["id"]); ?></td>
+                                    <td><?php echo ($vo["title"]); ?></td>
+                                    <td><?php echo (date("y-m-d H:i",$vo["create_time"])); ?></td>
+                                    <td><?php echo (isThumb($vo["thumb"])); ?></td>
+                                    <td>
+                                        <span  attr-status="<?php if($vo['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($vo["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($vo["status"])); ?></span>
+                                    </td>
+                                    <td>
+                                        <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
+                                        <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                                        </a>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>
                     </from>

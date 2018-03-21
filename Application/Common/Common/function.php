@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 公用的方法
 */
@@ -63,7 +63,7 @@ function getCopyFromById($id){
 }
 function isThumb($thumb){
     if($thumb){
-        return '<span style="color:"red">有</span>';
+        return '<span style="color:red">有</span>';
     }
     return '无';
 }

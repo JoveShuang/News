@@ -124,9 +124,9 @@
                             <?php if(is_array($positions)): $i = 0; $__LIST__ = $positions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$position): $mod = ($i % 2 );++$i;?><tr>
                                 <td><?php echo ($position["id"]); ?></td>
                                 <td><?php echo ($position["name"]); ?></td>
-                                <td><?php echo ($position["create_time"]); ?></td>
+                                <td><?php echo (date("y-m-d H:i",$position["create_time"])); ?></td>
                                 <td>
-                                    <span  attr-status="0"  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ></span>
+                                    <span  attr-status="<?php if($position['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($position["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($position["status"])); ?></span>
                                 </td>
                                 <td>
                                     <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>

@@ -151,7 +151,7 @@
                                 <td><?php echo ($menu["name"]); ?></td>
                                 <td><?php echo ($menu["m"]); ?></td>
                                 <td><?php echo (getMenuType($menu["type"])); ?></td>
-                                <td><?php echo (status($menu["status"])); ?></td>
+                                <td><?php echo (status($menu["status"])); ?></span></td><!-- <span  attr-status="<?php if($menu['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($menu["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" > -->
                                 <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($menu["menu_id"]); ?>"></span>    <a href="javascript:void(0)" attr-id="<?php echo ($menu["menu_id"]); ?>" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 

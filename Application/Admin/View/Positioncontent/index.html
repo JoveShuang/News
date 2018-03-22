@@ -69,7 +69,7 @@
                         <tbody>
                             <volist name="contents" id="vo">
                                 <tr>
-                                    <td><input size=4 type='text'  name='listorder{$vo.id}' value="{$vo.position_id}"/></td>
+                                    <td><input size=4 type='text'  name='listorder[{$vo.id}]' value="{$vo.listorder}"/></td>
                                     <td>{$vo.id}</td>
                                     <td>{$vo.title}</td>
                                     <td>{$vo.create_time|date="y-m-d H:i",###}</td>
@@ -78,8 +78,8 @@
                                         <span  attr-status="<if condition="$vo['status'] eq 1">0<else/>1</if>"  attr-id="{$vo.id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$vo.status|status}</span>
                                     </td>
                                     <td>
-                                        <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                                        <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                        <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$vo.id}" ></span>
+                                        <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$vo.id}"  attr-message="删除">
                                             <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                         </a>
                                     </td>

@@ -37,6 +37,12 @@ class PositionContentModel extends Model{
 
         return $this->_db->where('id='.$id)->save($data);
     }
+    public function insert($data = array()){
+        if(!$data || !is_array($data)){
+            return 0;
+        }
+        return $this->_db->add($data);
+    }
     public function updateStatusById($id,$status){
         if(!is_numeric($status)){
             throw_exception('status不能为非数字');
@@ -46,6 +52,13 @@ class PositionContentModel extends Model{
         }
         $data['status'] = $status;
 
+        return $this->_db->where('id='.$id)->save($data);
+    }
+    public function updateListorderById($id,$listorder){
+        if(!$id || !is_numeric($id)){
+            throw_exception('Id不合法');
+        }
+        $data = array('listorder'=>intval($listorder));
         return $this->_db->where('id='.$id)->save($data);
     }
     public function getNormalPositions(){

@@ -37,8 +37,10 @@ class PositioncontentController extends CommonController{
                     }
                 }else{
                     return show(0,'图片不能为空');
-    
                 }
+            }
+            if($_POST['id']){
+                return $this->save($_POST);
             }
             try{
                 $id = D("PositionContent")->insert($_POST);
@@ -56,26 +58,39 @@ class PositioncontentController extends CommonController{
         }
         
     }
-    public function setStatus(){
-        try{
-            if($_POST){
-                $id = $_POST['id'];
-                $status = $_POST['status'];
-                if(!$id){
-                    return show(0,'ID不存在');
-                }
-                $res = D("PositionContent")->updateStatusById($id,$status);
-                if($res){
-                    return show(1,'操作成功');
-                }else{
-                    return show(0,'操作失败');
-                }
+    public function listorder(){
+        return parent::listorder("PositionContent");
+        
+    }
+    public function edit(){
+        $id = $_GET['id'];
+        $position = D("PositionContent")->find($id);
+        $positions = D("Position")->getNormalPositions();
+        $this->assign('positions',$positions);
+        $this->assign('vo',$position);
+        $this->display();
+    }
+    public function save($data){
+        $id = $data['id'];
+        unset($data['id']);
+        try {
+            $resId = D("PositionContent")->updateById($id,$data);
+
+            if($resId === false){
+                return show(0,'更新失败');
             }
-            return show(0,'没有提交的内容');
-        }
-        catch(Exception $e){
+            return show(1,'更新成功');
+        } catch (Exception $e) {
             return show(0,$e->getMessage());
         }
-        
+    }
+
+    public function setStatus(){
+        $data = array(
+            'id' =>intval($_POST['id']),
+            'status' => intval($_POST['status']),
+
+        );
+       return parent::setStatus($data,'PositionContent');
     }
 }

@@ -8,6 +8,9 @@ use Think\Exception;
 
 class BasicController extends CommonController{
     public function index(){
+        $result = D("Basic")->select();
+        // echo json_encode($result);exit;
+        $this->assign('vo',$result);
         $this->display();
     }
     public function add(){

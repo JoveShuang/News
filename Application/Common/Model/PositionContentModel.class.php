@@ -9,6 +9,7 @@ use Think\Model;
 class PositionContentModel extends Model{
     private $_db = '';
     public function __construct(){
+        parent::__construct();
         $this->_db = M('PositionContent');
     }
     public function select($data = array(),$limit=0){

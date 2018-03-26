@@ -5,6 +5,7 @@ use Think\Model;
 class MenuModel extends Model{
     private $_db = '';
     public function __construct(){
+        parent::__construct();
         $this->_db = M('menu');
     }
 

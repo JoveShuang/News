@@ -9,6 +9,7 @@ use Think\Model;
 class PositionModel extends Model{
     private $_db = '';
     public function __construct(){
+        parent::__construct();
         $this->_db = M('Position');
     }
     public function insert($data = array()){

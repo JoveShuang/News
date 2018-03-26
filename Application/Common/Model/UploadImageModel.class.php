@@ -1,12 +1,11 @@
 <?php
 namespace Common\Model;
-use Think\Model;
 
 /**
  * 上传图片类
  * @author  singwa
  */
-class UploadImageModel extends Model {
+class UploadImageModel {
     private $_uploadObj = '';
     private $_uploadImageData = '';
 

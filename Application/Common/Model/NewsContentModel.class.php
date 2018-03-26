@@ -9,6 +9,7 @@ class NewsContentModel extends Model{
     private $_db = '';
 
     public function __construct(){
+        parent::__construct();
         $this->_db = M('NewsContent');
     }
     public function insert($data = array()){

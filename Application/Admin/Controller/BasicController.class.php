@@ -8,7 +8,7 @@ use Think\Exception;
 
 class BasicController extends CommonController{
     public function index(){
-        $result = D("Basic")->select();
+        $result = F('basic_web_config');
         // echo json_encode($result);exit;
         $this->assign('vo',$result);
         $this->display();

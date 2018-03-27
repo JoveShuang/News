@@ -9,7 +9,6 @@ class NewsContentModel extends Model{
     private $_db = '';
 
     public function __construct(){
-        parent::__construct();
         $this->_db = M('NewsContent');
     }
     public function insert($data = array()){
@@ -17,6 +16,7 @@ class NewsContentModel extends Model{
             return 0;
         }
         $data['create_time'] = time();
+        var_dump($data);exit;
         if(isset($data['content']) && $data['content']){
             $data['content'] = htmlspecialchars($data['contnet']);
         }
@@ -34,7 +34,7 @@ class NewsContentModel extends Model{
             throw_exception("更新数据不合法");
         }
         if(isset($data['content']) && $data['content']){
-            $data['content'] = htmlspecialchars($data['contnet']);
+            $data['content'] = htmlspecialchars($data['content']);
         }
         
         return $this->_db->where('news_id='.$id)->save($data);

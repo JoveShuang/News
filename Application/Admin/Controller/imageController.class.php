@@ -24,7 +24,7 @@ class ImageController extends CommonController{
         }
     }
     public function kindupload(){
-        $upload = D("uploadImage");
+        $upload = D("UploadImage");
         $res = $upload->upload();
         if($res === false){
             return showKind(1,'上传失败');

@@ -77,7 +77,7 @@ class ContentController extends CommonController{
         }else{
 
         
-            $websiteMenu = D("Menu")->getBarMenus();
+            $webSiteMenu = D("Menu")->getBarMenus();
             $titleFontColor = C("TITLE_FONT_COLOR");
             $copyFrom = C("COPY_FROM");
             $this->assign('webSiteMenu',$webSiteMenu);
@@ -93,6 +93,7 @@ class ContentController extends CommonController{
             try{
                 $id = D("News")->updateById($newsId,$data);
                 $newsContentData['content'] = $data['content'];
+                
                 $condId = D("NewsContent")->updateNewsById($newsId,$newsContentData);    
                 if($id === false || $condId === false){
                     return show(0,'更新失败');

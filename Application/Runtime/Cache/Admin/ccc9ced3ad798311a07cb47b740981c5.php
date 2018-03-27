@@ -166,7 +166,7 @@
                       <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($new["news_id"]); ?>"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
-
+                      <a href="index.php?c=detail&a=view&id=<?php echo ($new["news_id"]); ?>"><span class="glyphicon glyphicon-eye-open"></span></a>
                     </td>
                   </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>

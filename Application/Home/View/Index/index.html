@@ -6,13 +6,14 @@
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
+            <div class="banner-info"><span>阅读数</span><i class="news_count node-{$result['topPicNews'][0]['news_id']}" news-id="{$result['topPicNews'][0]['news_id']}">{$news_count}</i></div>
             <a target="_blank" href="/index.php?c=detail&id={$result['topPicNews'][0]['news_id']}"><img src="{$result['topPicNews'][0]['thumb']}" height="500" width="500" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
               <volist name="result['topSmailNews']" id="vo">                
               <li>
-                <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="210" width="150" alt="{$vo.title}"></a>
+                <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="150" width="210" alt="{$vo.title}"></a>
               </li>
               </volist>
             </ul>
@@ -29,7 +30,7 @@
               {$vo.description}
             </dd>
             <dd class="news-info">
-              {$vo.keywords} <span>{$vo.create_time|date="Y-m-d H:i:s",###}</span> 阅读(0)
+              {$vo.keywords} <span>{$vo.create_time|date="Y-m-d H:i:s",###}</span> 阅读(<i news-id="{$vo.news_id}" class="news_count node-{$vo.news_id}">{$vo.count}</i>)
             </dd>
           </dl>
           </volist>
@@ -42,4 +43,6 @@
   </div>
 </section>
 </body>
+<script type="text/javascript" src="/Public/js/jquery.js"></script>
+<script type="text/javascript" src="/Public/js/count.js"></script>
 </html>

@@ -107,7 +107,7 @@ class NewsModel extends Model{
     }
 
     public function updateCount($id,$count){
-        if(!is_numeric($id)){
+        if(!$id || !is_numeric($id)){
             throw_exception("ID 不合法");
         }
         if(!is_numeric($count)){
@@ -115,6 +115,6 @@ class NewsModel extends Model{
         }
 
         $data['count'] = $count;
-        return $this->_db->where('news_id'.$id)->save($data);
+        return $this->_db->where('news_id='.$id)->save($data);
     }
 }

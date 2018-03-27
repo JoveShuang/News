@@ -74,7 +74,7 @@ class MenuModel extends Model{
     }
     public function getBarMenus(){
         $data = array(
-            'status'=>1,
+            'status'=>array('neq',-1),
             'type'=>0,
         );
 

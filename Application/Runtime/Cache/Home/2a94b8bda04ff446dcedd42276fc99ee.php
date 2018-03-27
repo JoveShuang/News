@@ -33,12 +33,13 @@
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
+            <div class="banner-info"><span>阅读数</span><i class="news_count node-<?php echo ($result['topPicNews'][0]['news_id']); ?>" news-id="<?php echo ($result['topPicNews'][0]['news_id']); ?>"><?php echo ($news_count); ?></i></div>
             <a target="_blank" href="/index.php?c=detail&id=<?php echo ($result['topPicNews'][0]['news_id']); ?>"><img src="<?php echo ($result['topPicNews'][0]['thumb']); ?>" height="500" width="500" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
               <?php if(is_array($result['topSmailNews'])): $i = 0; $__LIST__ = $result['topSmailNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img src="<?php echo ($vo["thumb"]); ?>" height="210" width="150" alt="<?php echo ($vo["title"]); ?>"></a>
+                <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img src="<?php echo ($vo["thumb"]); ?>" height="150" width="210" alt="<?php echo ($vo["title"]); ?>"></a>
               </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
           </div>
@@ -53,7 +54,7 @@
               <?php echo ($vo["description"]); ?>
             </dd>
             <dd class="news-info">
-              <?php echo ($vo["keywords"]); ?> <span><?php echo (date("Y-m-d H:i:s",$vo["create_time"])); ?></span> 阅读(0)
+              <?php echo ($vo["keywords"]); ?> <span><?php echo (date("Y-m-d H:i:s",$vo["create_time"])); ?></span> 阅读(<i news-id="<?php echo ($vo["news_id"]); ?>" class="news_count node-<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["count"]); ?></i>)
             </dd>
           </dl><?php endforeach; endif; else: echo "" ;endif; ?>
           
@@ -83,4 +84,6 @@
   </div>
 </section>
 </body>
+<script type="text/javascript" src="/Public/js/jquery.js"></script>
+<script type="text/javascript" src="/Public/js/count.js"></script>
 </html>

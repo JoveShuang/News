@@ -71,14 +71,14 @@ class CommonController extends Controller {
 	}
 	public function setStatus($data,$models){
         try{
-            if($_POST){
+            if($data){
                 $id = $data['id'];
                 $status = $data['status'];
                 if(!$id){
                     return show(0,'ID不存在');
                 }
-                $res = D($models)->updateStatusById($id,$status);
 
+                $res = D($models)->updateStatusById($id,$status);
                 if($res){
                     return show(1,'操作成功');
                 }else{

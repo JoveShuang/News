@@ -1,0 +1,108 @@
+[ 2018-03-29T13:29:13+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001997s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0918s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301353' WHERE ( admin_id=1 ) [ RunTime:0.0221s ]
+
+[ 2018-03-29T13:29:19+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002045s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301359' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T13:29:19+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002419s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301359' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002031s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002025s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002065s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002064s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002014s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T13:29:20+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002014s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522301360' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+
+[ 2018-03-29T14:06:45+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522303605' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-29T14:06:46+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522303606' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+

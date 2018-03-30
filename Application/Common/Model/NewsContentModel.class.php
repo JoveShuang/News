@@ -16,7 +16,6 @@ class NewsContentModel extends Model{
             return 0;
         }
         $data['create_time'] = time();
-        var_dump($data);exit;
         if(isset($data['content']) && $data['content']){
             $data['content'] = htmlspecialchars($data['contnet']);
         }

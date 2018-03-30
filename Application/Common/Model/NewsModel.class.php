@@ -52,6 +52,30 @@ class NewsModel extends Model{
         return $this->_db->where($conditions)->count();
     }
 
+    public function getCount(){
+        if(!$_POST){
+            return show(0,'没有任何内容');
+        }
+
+        $newsIds = array_unique($_POST);
+
+        try{
+            $list = D("News")->getNewsByNewsIdIn($newsIds);
+        }catch(Exception $e){
+            return show(0,$e->getMessage());
+        }
+        if(!$list){
+            return show(0,'notdata');
+
+        }
+
+        $data=array();
+        foreach ($list as $k => $v) {
+            $data[$v['news_id']] = $v['count']; 
+        }
+        return show(1,'success',$data);
+    }
+    
     public function find($id){
         $data = $this->_db->where('news_id='.$id)->find();
         return $data;
@@ -116,5 +140,11 @@ class NewsModel extends Model{
 
         $data['count'] = $count;
         return $this->_db->where('news_id='.$id)->save($data);
+    }
+    public function maxcount(){
+        $data  = array(
+            'status' => 1,
+         );
+        return $this->_db->where($data)->order('count desc')->find();
     }
 }

@@ -1,0 +1,54 @@
+[ 2018-03-29T13:28:22+08:00 ] ::1 /index.php?c=index&a=getCount
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('23','21','22','24','39')  [ RunTime:0.0195s ]
+
+[ 2018-03-29T13:28:50+08:00 ] ::1 /index.php?c=index&a=getCount
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003043s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('23','21','22','24','39')  [ RunTime:0.0004s ]
+
+[ 2018-03-29T14:07:19+08:00 ] ::1 /index.php?c=index&a=getCount
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('23','21','22','24','39')  [ RunTime:0.0004s ]
+
+[ 2018-03-29T14:52:26+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:32+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:34+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:35+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:35+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:35+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:35+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:36+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+
+[ 2018-03-29T14:52:36+08:00 ] ::1 /home/test
+ERR: 无法加载控制器:Test
+

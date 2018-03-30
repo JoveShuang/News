@@ -11,6 +11,7 @@ $('#button-add').click(function(){
  */
 $("#singcms-button-submit").click(function(){
     var data = $("#singcms-form").serializeArray();
+    alert(data);
     postData = {};
     $(data).each(function(i){
         postData[this.name] = this.value;

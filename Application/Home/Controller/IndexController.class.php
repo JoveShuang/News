@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+// include './Application/Common/Common/function.php';
 class IndexController extends CommonController {
     public function index($type = ''){
         //获取排行
@@ -63,8 +64,22 @@ class IndexController extends CommonController {
 
         $data=array();
         foreach ($list as $k => $v) {
-            $data[$v['news_id']] = $v['count'];
+            $data[$v['news_id']] = $v['count']; 
         }
         return show(1,'success',$data);
+    }
+
+    public function test(){
+
+        D("News","Logic")->echotest();
+
+        // var_dump(U('Index/index',array('a'=>'nj')));
+
+        // try {
+            
+        // } catch (Exception $e) {
+            
+        // }
+
     }
 }

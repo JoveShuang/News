@@ -1,0 +1,172 @@
+[ 2018-03-30T13:04:48+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0483s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522386288' WHERE ( admin_id=1 ) [ RunTime:0.0328s ]
+
+[ 2018-03-30T13:04:49+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522386289' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-30T13:04:57+08:00 ] ::1 /admin.php?c=admin&a=setStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: UPDATE `cms_admin` SET `status`='-1' WHERE ( admin_id=3 ) [ RunTime:0.0004s ]
+
+[ 2018-03-30T13:11:10+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 参数错误或者未定义:data
+
+[ 2018-03-30T13:11:11+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 参数错误或者未定义:data
+
+[ 2018-03-30T13:11:18+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 参数错误或者未定义:data
+
+[ 2018-03-30T13:14:57+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 参数错误或者未定义:data
+
+[ 2018-03-30T13:16:51+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002045s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 非法操作:save
+
+[ 2018-03-30T13:17:15+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+ERR: 参数错误或者未定义:data
+
+[ 2018-03-30T13:26:42+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002669s ]
+
+[ 2018-03-30T13:27:19+08:00 ] ::1 /admin.php?c=admin&a=save
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\AdminController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0020s ]
+SQL: UPDATE `cms_admin` SET `realname`='Joe',`email`='tracywxh0830@126.com' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-30T13:43:07+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001436s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="jove" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522388587' WHERE ( admin_id=5 ) [ RunTime:0.0003s ]
+
+[ 2018-03-30T13:45:09+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="jove" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522388709' WHERE ( admin_id=5 ) [ RunTime:0.0003s ]
+
+[ 2018-03-30T13:45:43+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-03-30T13:45:50+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522388750' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+
+[ 2018-03-30T14:07:43+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:02+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:03+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:03+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:03+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:04+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:09:04+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:15:07+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:00+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:00+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:01+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:01+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:03+08:00 ] ::1 /admin.php?m=&&m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:26:08+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1522391168' WHERE ( admin_id=1 ) [ RunTime:0.0002s ]
+
+[ 2018-03-30T14:26:09+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+
+[ 2018-03-30T14:52:18+08:00 ] ::1 /index.php?m=admin&c=index
+ERR: Think\Model:getCount方法不存在！
+

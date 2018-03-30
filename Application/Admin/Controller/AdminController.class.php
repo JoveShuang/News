@@ -49,19 +49,31 @@ class AdminController extends CommonController
         );
         return parent::setStatus($_POST,'Admin');
     }
-    public function save($data){
-            $adminId = $data['admin_id'];
-            unset($data['admin_id']);
+
+    public function personal(){
+        $res = $this->getLoginUser();
+        $user = D("Admin")->getAdminByAdminId($res['admin_id']);
+        $this->assign('vo',$user);
+        $this->display();
+    }
+
+    public function save(){
+            $user = $this->getLoginUser();
+            if(!$user){
+                return show(0,'用户不存在');
+            }
+
+            $data['realname'] = $_POST['realname'];
+            $data['email'] = $_POST['email'];
+
             try{
-                $id = D("Admin")->updateById($adminId,$data);
+                $id = D("Admin")->updateByAdminId($user['admin_id'],$data);
                 if($id === false){
-                    return show(0,'更新失败');
-                }else{
-                    return show(1,'更新成功');
+                    return show(0,'配置失败');
                 }
+                return show(1,'配置成功');
             }catch(Exception $e){
                 return show(0,$e->getMessage());
             }
-            
-        }
+    }
 }

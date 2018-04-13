@@ -6,15 +6,15 @@ class MenuModel extends Model{
     private $_db = '';
     public function __construct(){
         parent::__construct();
-        $this->_db = M('menu');
+        $this->_db = M('Menu');
     }
 
 
     public function insert($data = array()){
-        if(!$data || !is_array($data)){
+        if(!is_array($data) || empty($data)){
             return 0;
         }
-        return $this->_db->add($data);
+        return $this->add($data);
     }
 
     public function getMenus($data,$page,$pageSize=10){

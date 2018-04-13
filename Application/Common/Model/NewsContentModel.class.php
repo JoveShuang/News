@@ -8,6 +8,10 @@ use Think\Model;
 class NewsContentModel extends Model{
     private $_db = '';
 
+    protected $_auto = [
+        ['create_time', 'time', 1, 'function']
+    ];
+
     public function __construct(){
         $this->_db = M('NewsContent');
     }
@@ -15,10 +19,11 @@ class NewsContentModel extends Model{
         if(!$data || !is_array($data)){
             return 0;
         }
-        $data['create_time'] = time();
+        // $data['create_time'] = time();
         if(isset($data['content']) && $data['content']){
             $data['content'] = htmlspecialchars($data['contnet']);
         }
+        $data = $this->create($data);
         return $this->_db->add($data);
     }
 

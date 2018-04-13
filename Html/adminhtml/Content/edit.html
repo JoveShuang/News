@@ -3,7 +3,7 @@
 <div id="wrapper">
 
   <include file="Index/nav"/>
-  <script src="/Public/js/kindeditor/kindeditor-all.js"></script>
+  <script src="./Public/js/kindeditor/kindeditor-all.js"></script>
   <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -14,7 +14,7 @@
 
           <ol class="breadcrumb">
             <li>
-              <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=content">文章管理</a>
+              <i class="fa fa-dashboard"></i>  <a href="./admin.php?c=content">文章管理</a>
             </li>
             <li class="active">
               <i class="fa fa-edit"></i> 文章添加
@@ -125,20 +125,20 @@
 </div>
 <script>
   var SCOPE = {
-    'save_url' : '/admin.php?c=content&a=add',
-    'jump_url' : '/admin.php?c=content',
-    'ajax_upload_image_url' : '/admin.php?c=image&a=ajaxuploadimage',
+    'save_url' : './admin.php?c=content&a=add',
+    'jump_url' : './admin.php?c=content',
+    'ajax_upload_image_url' : './admin.php?c=image&a=ajaxuploadimage',
     'ajax_upload_swf' : '/Public/js/party/uploadify.swf',
   };
 
 </script>
 <!-- /#wrapper -->
-<script src="/Public/js/admin/image.js"></script>
+<script src="./Public/js/admin/image.js"></script>
 <script>
   // 6.2
   KindEditor.ready(function(K) {
     window.editor = K.create('#editor_singcms',{
-      uploadJson : '/admin.php?c=image&a=kindupload',
+      uploadJson : './admin.php?c=image&a=kindupload',
       afterBlur : function(){this.sync();}, //
     });
   });

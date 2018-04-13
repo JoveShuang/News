@@ -16,3 +16,15 @@ SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0030s ]
 SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0027s ]
 SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('23','21','22','24','39')  [ RunTime:0.0004s ]
 
+[ 2018-03-30T16:40:08+08:00 ] ::1 /?c=index&a=error
+ERR: 非法操作:error
+
+[ 2018-03-30T16:40:15+08:00 ] ::1 /index.php?c=index&a=getCount
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('23','21','22','24','39')  [ RunTime:0.0004s ]
+

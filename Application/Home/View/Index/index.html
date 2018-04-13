@@ -7,13 +7,13 @@
         <div class="banner">
           <div class="banner-left">
             <div class="banner-info"><span>阅读数</span><i class="news_count node-{$result['topPicNews'][0]['news_id']}" news-id="{$result['topPicNews'][0]['news_id']}">{$news_count}</i></div>
-            <a target="_blank" href="/index.php?c=detail&id={$result['topPicNews'][0]['news_id']}"><img src="{$result['topPicNews'][0]['thumb']}" height="500" width="500" alt=""></a>
+            <a target="_blank" href="./index.php?c=detail&id={$result['topPicNews'][0]['news_id']}"><img src="{$result['topPicNews'][0]['thumb']}" height="500" width="500" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
               <volist name="result['topSmailNews']" id="vo">                
               <li>
-                <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="150" width="210" alt="{$vo.title}"></a>
+                <a target="_blank" href="./index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="150" width="210" alt="{$vo.title}"></a>
               </li>
               </volist>
             </ul>
@@ -22,9 +22,9 @@
         <div class="news-list">
           <volist name="result['ListNews']" id="vo">
           <dl>
-            <dt> <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}">{$vo.title}</a></dt>
+            <dt> <a target="_blank" href="./index.php?c=detail&id={$vo.news_id}">{$vo.title}</a></dt>
             <dd class="news-img">
-               <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="200" width="200" alt="{$vo.title}"></a>
+               <a target="_blank" href="./index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="200" width="200" alt="{$vo.title}"></a>
             </dd>
             <dd class="news-intro">
               {$vo.description}
@@ -43,6 +43,6 @@
   </div>
 </section>
 </body>
-<script type="text/javascript" src="/Public/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/js/count.js"></script>
+<script type="text/javascript" src="./Public/js/jquery.js"></script>
+<script type="text/javascript" src="./Public/js/count.js"></script>
 </html>

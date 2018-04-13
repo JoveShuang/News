@@ -7,9 +7,9 @@
                 <div class="news-list">
                   <volist name="result['listNews']" id="vo">
                   <dl>
-                    <dt> <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}">{$vo.title}</a></dt>
+                    <dt> <a target="_blank" href="./index.php?c=detail&id={$vo.news_id}">{$vo.title}</a></dt>
                     <dd class="news-img">
-                       <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="200"  width="200" alt="{$vo.title}"></a>
+                       <a target="_blank" href="./index.php?c=detail&id={$vo.news_id}"><img src="{$vo.thumb}" height="200"  width="200" alt="{$vo.title}"></a>
                     </dd>
                     <dd class="news-intro">
                       {$vo.description}

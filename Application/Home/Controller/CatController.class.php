@@ -14,7 +14,7 @@ class CatController extends CommonController{
         $advNews = D("PositionContent")->select(array('status'=>1,'position_id'=>5),2);
         $rankNews = $this->getRank();
 
-        $page = $_REQUEST['p'] ? $_REQUEST['p'] : 1;
+        $page = $_REQUEST['p'] ?: 1;
         $pageSize = 20;
         $conds = array(
             'status' => 1,

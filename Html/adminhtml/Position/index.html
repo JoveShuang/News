@@ -21,7 +21,7 @@
         </div>
         <!-- /.row -->
         <div >
-            <button url="/admin.php?c=position&a=add" id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            <button url="./admin.php?c=position&a=add" id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
         </div>
 
         <div class="row">
@@ -76,13 +76,13 @@
 <!-- /#wrapper -->
 <script>
     var SCOPE = {
-        'edit_url' : '/admin.php?c=position&a=edit',
-        'set_status_url' : '/admin.php?c=position&a=setStatus',
-        'add_url' : '/admin.php?c=position&a=add',
+        'edit_url' : './admin.php?c=position&a=edit',
+        'set_status_url' : './admin.php?c=position&a=setStatus',
+        'add_url' : './admin.php?c=position&a=add',
     }
     $(".singcms-table #sing-add-position-content").on('click',function(){
         var id = $(this).attr('attr-id');
-        window.location.href='/admin.php?c=positioncontent&a=index&position_id='+id;
+        window.location.href='./admin.php?c=positioncontent&a=index&position_id='+id;
     });
 </script>
 <include file="Index/footer" />

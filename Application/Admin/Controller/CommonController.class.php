@@ -21,7 +21,7 @@ class CommonController extends Controller {
 		$isLogin = $this->isLogin();
 		if(!$isLogin) {
 			// 跳转到登录页面
-			$this->redirect('/admin.php?c=login');
+			$this->redirect('./admin.php?c=login');
 		}
 	}
 
@@ -50,11 +50,11 @@ class CommonController extends Controller {
 		$newsId = $_GET['id'];
 		if(!newsId ){
 			//执行跳转
-			$this->redirect('/admin.php?c=content');
+			$this->redirect('./admin.php?c=content');
 		}
 		$news = D("News")->find($newsId);
 		if(!$news){
-			$this->redirect('/admin.php?c=content');
+			$this->redirect('./admin.php?c=content');
 		}
 		$newsContent = D("NewsContent")->find($newsId);
 		if($newsContent){
@@ -114,6 +114,14 @@ class CommonController extends Controller {
         }
         return show(0,'排序数据失败',array('jump_url' => $jumpUrl));
         
+    }
+
+    public function show($status,$message,$data=array(), $type = 'JSON'){
+        $this->ajaxReturn(array(
+            'status' => $status,
+            'message' => $message,
+            'data' => $data,
+        ), $type);
     }
 
 }

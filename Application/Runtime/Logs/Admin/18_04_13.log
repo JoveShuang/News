@@ -1,0 +1,40 @@
+[ 2018-04-13T17:01:03+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1523610063' WHERE ( admin_id=1 ) [ RunTime:0.0826s ]
+
+[ 2018-04-13T17:10:53+08:00 ] ::1 /admin.php?c=basic&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [2048] Declaration of Admin\Controller\CommonController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\wamp\wamp\www\News\Application\Admin\Controller\CommonController.class.php 第 127 行.
+
+[ 2018-04-13T17:11:06+08:00 ] ::1 /admin.php?c=content&a=push
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+NOTIC: [2048] Declaration of Admin\Controller\CommonController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\wamp\wamp\www\News\Application\Admin\Controller\CommonController.class.php 第 127 行.
+NOTIC: [2048] Declaration of Admin\Controller\ContentController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) E:\wamp\wamp\www\News\Application\Admin\Controller\ContentController.class.php 第 5 行.
+NOTIC: [2048] Declaration of Admin\Controller\ContentController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') E:\wamp\wamp\www\News\Application\Admin\Controller\ContentController.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\NewsModel.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('39')  [ RunTime:0.0717s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp\wamp\www\News\Application\Common\Model\PositionContentModel.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0021s ]
+SQL: INSERT INTO `cms_position_content` (`position_id`,`title`,`thumb`,`news_id`,`status`,`create_time`) VALUES ('2','webSiteMenu','/upload/2018/03/27/5ab9e1fb39185.jpg','39','1','1522131492') [ RunTime:0.0005s ]
+
+[ 2018-04-13T17:38:45+08:00 ] ::1 /index.php?m=admin&c=login&a=check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1523612325' WHERE ( admin_id=1 ) [ RunTime:0.0003s ]
+

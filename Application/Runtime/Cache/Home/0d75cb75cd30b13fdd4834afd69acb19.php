@@ -6,21 +6,21 @@
   <title><?php echo ($config["title"]); ?></title>
   <meta name="keywords" content="{config.keywords}">
   <meta name="description" content="{config.description}">
-  <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
+  <link rel="stylesheet" href="./Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="./Public/css/home/main.css" type="text/css" />
 </head>
 <body>
 <header id="header">
   <div class="navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a href="/">
-          <img src="/Public/images/logo.png" alt="">
+        <a href="./">
+          <img src="./Public/images/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="/" <?php if($result['catId'] == 0): ?>class="curr"<?php endif; ?>>首页</a></li>
-        <?php if(is_array($navs)): foreach($navs as $key=>$vo): ?><li><a href="/index.php?c=cat&id=<?php echo ($vo["menu_id"]); ?>" <?php if($vo['menu_id'] == $result['catId']): ?>class="curr"<?php endif; ?>><?php echo ($vo["name"]); ?></a></li><?php endforeach; endif; ?>
+        <li><a href="./" <?php if($result['catId'] == 0): ?>class="curr"<?php endif; ?>>首页</a></li>
+        <?php if(is_array($navs)): foreach($navs as $key=>$vo): ?><li><a href="./index.php?c=cat&id=<?php echo ($vo["menu_id"]); ?>" <?php if($vo['menu_id'] == $result['catId']): ?>class="curr"<?php endif; ?>><?php echo ($vo["name"]); ?></a></li><?php endforeach; endif; ?>
       </ul>
     </div>
   </div>
@@ -44,7 +44,7 @@
         <div class="right-content">
           <ul>
             <?php if(is_array($result['rankNews'])): $k = 0; $__LIST__ = $result['rankNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><li class="num<?php echo ($k); ?> curr">
-              <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["small_title"]); ?></a>
+              <a target="_blank" href="./index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["small_title"]); ?></a>
               <?php if($k == 1): ?><div class="intro">
                   中美双方应该不断挖掘合作潜力、培育合作亮点，加快双边投资协定谈判...
                 </div><?php endif; ?>

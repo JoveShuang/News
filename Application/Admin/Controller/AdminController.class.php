@@ -17,23 +17,25 @@ class AdminController extends CommonController
 
     public function add(){
 
+        $post = I('post.');
+
         //保存数据
         if(IS_POST){
-
-            if(!isset($_POST['username']) || !$_POST['username']){
-                return show(0,'用户名不能为空');
+            if(!is_string($post['username']) || ($post['username']) === '') {
+            // if(!isset($post['username']) || !$post['username']){
+                return $this->show(0,'用户名不能为空');
             }
-            if(!isset($_POST['password']) || !$_POST['password']){
+            if(!isset($post['password']) || !$post['password']){
                 return show(0,'密码不能为空');
             }
-            $_POST['password'] = getMd5Password($_POST['password']);
-            $admin = D("Admin")->getAdminByUsername($_POST['username']);
+            $post['password'] = getMd5Password($post['password']);
+            $admin = D("Admin")->getAdminByUsername($post['username']);
             if($admin && $admin['status']!=-1){
                 return show(0,'该用户存在');
             }
 
             //新增
-            $id = D("Admin")->insert($_POST);
+            $id = D("Admin")->insert($post);
             if(!$id){
                 return show(0,'新增失败');
             }
